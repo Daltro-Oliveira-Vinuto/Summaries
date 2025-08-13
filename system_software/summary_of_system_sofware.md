@@ -12,7 +12,7 @@
 	> * assembler: gcc -c, assembly language -> machine language.
 	> * link: gcc -l -o, object file(machine language) -> load module(executable file).
 	> * loader: ./file , (load module(executable file) in the main memory.
-  > * [makefile](makefile)
+  	> * [makefile](makefile)
 
 2. ## 
 
