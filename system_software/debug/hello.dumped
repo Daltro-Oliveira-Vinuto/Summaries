@@ -1,0 +1,333 @@
+
+src/c/hello.o:     file format elf32-i386
+src/c/hello.o
+architecture: i386, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .group        00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, READONLY, GROUP, LINK_ONCE_DISCARD
+  1 .text         000000b2  00000000  00000000  0000003c  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .data         00000000  00000000  00000000  000000ee  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000000  00000000  00000000  000000ee  2**0
+                  ALLOC
+  4 .rodata       0000001a  00000000  00000000  000000ee  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .text.__x86.get_pc_thunk.ax 00000004  00000000  00000000  00000108  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  6 .debug_info   00000142  00000000  00000000  0000010c  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  7 .debug_abbrev 000000df  00000000  00000000  0000024e  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_aranges 00000020  00000000  00000000  0000032d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+  9 .debug_line   00000073  00000000  00000000  0000034d  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING, OCTETS
+ 10 .debug_str    00000143  00000000  00000000  000003c0  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_line_str 00000083  00000000  00000000  00000503  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 12 .comment      0000002c  00000000  00000000  00000586  2**0
+                  CONTENTS, READONLY
+ 13 .note.GNU-stack 00000000  00000000  00000000  000005b2  2**0
+                  CONTENTS, READONLY
+ 14 .eh_frame     0000007c  00000000  00000000  000005b4  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 hello.c
+00000000 l    d  .text	00000000 .text
+00000000 l    d  .rodata	00000000 .rodata
+00000000 l    d  .text.__x86.get_pc_thunk.ax	00000000 .text.__x86.get_pc_thunk.ax
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_line_str	00000000 .debug_line_str
+00000000 g     F .text	00000078 main
+00000000 g     F .text.__x86.get_pc_thunk.ax	00000000 .hidden __x86.get_pc_thunk.ax
+00000000         *UND*	00000000 _GLOBAL_OFFSET_TABLE_
+00000078 g     F .text	0000003a print_hello
+00000000         *UND*	00000000 .hidden __stack_chk_fail_local
+00000000         *UND*	00000000 printf
+
+
+RELOCATION RECORDS FOR [.text]:
+OFFSET   TYPE              VALUE 
+00000012 R_386_PC32        __x86.get_pc_thunk.ax
+00000017 R_386_GOTPC       _GLOBAL_OFFSET_TABLE_
+00000053 R_386_PC32        print_hello
+0000006c R_386_PC32        __stack_chk_fail_local
+00000080 R_386_PC32        __x86.get_pc_thunk.ax
+00000085 R_386_GOTPC       _GLOBAL_OFFSET_TABLE_
+0000008b R_386_GOTOFF      .rodata
+0000009d R_386_GOTOFF      .rodata
+000000a5 R_386_PLT32       printf
+
+
+RELOCATION RECORDS FOR [.debug_info]:
+OFFSET   TYPE              VALUE 
+00000008 R_386_32          .debug_abbrev
+0000000d R_386_32          .debug_str
+00000012 R_386_32          .debug_line_str
+00000016 R_386_32          .debug_line_str
+0000001a R_386_32          .text
+00000022 R_386_32          .debug_line
+00000029 R_386_32          .debug_str
+00000030 R_386_32          .debug_str
+0000003c R_386_32          .debug_str
+00000043 R_386_32          .debug_str
+0000004a R_386_32          .debug_str
+00000051 R_386_32          .debug_str
+00000058 R_386_32          .debug_str
+00000066 R_386_32          .debug_str
+0000006d R_386_32          .debug_str
+00000074 R_386_32          .debug_str
+0000007e R_386_32          .debug_str
+0000009b R_386_32          .debug_str
+000000a2 R_386_32          .text
+000000c7 R_386_32          .debug_str
+000000d7 R_386_32          .debug_str
+000000e2 R_386_32          .text
+000000f1 R_386_32          .debug_str
+000000fe R_386_32          .debug_str
+0000010b R_386_32          .debug_str
+
+
+RELOCATION RECORDS FOR [.debug_aranges]:
+OFFSET   TYPE              VALUE 
+00000006 R_386_32          .debug_info
+00000010 R_386_32          .text
+
+
+RELOCATION RECORDS FOR [.debug_line]:
+OFFSET   TYPE              VALUE 
+00000022 R_386_32          .debug_line_str
+00000026 R_386_32          .debug_line_str
+0000002a R_386_32          .debug_line_str
+00000034 R_386_32          .debug_line_str
+00000039 R_386_32          .debug_line_str
+0000003e R_386_32          .debug_line_str
+00000048 R_386_32          .text
+
+
+RELOCATION RECORDS FOR [.eh_frame]:
+OFFSET   TYPE              VALUE 
+00000020 R_386_PC32        .text
+0000004c R_386_PC32        .text
+00000070 R_386_PC32        .text.__x86.get_pc_thunk.ax
+
+
+
+src/c/hello.o:     file format elf32-i386
+
+Contents of section .group:
+ 0000 01000000 07000000                    ........        
+Contents of section .text:
+ 0000 8d4c2404 83e4f0ff 71fc5589 e55183ec  .L$.....q.U..Q..
+ 0010 24e8fcff ffff0501 00000089 c88b5004  $.............P.
+ 0020 8955e48b 40088945 e065a114 00000089  .U..@..E.e......
+ 0030 45f431c0 c745e805 000000c7 45ec0700  E.1..E......E...
+ 0040 00008d45 e88945f0 8b45e883 ec08ff75  ...E..E..E.....u
+ 0050 ec50e8fc ffffff83 c410b800 0000008b  .P..............
+ 0060 55f4652b 15140000 007405e8 fcffffff  U.e+.....t......
+ 0070 8b4dfcc9 8d61fcc3 5589e553 83ec14e8  .M...a..U..S....
+ 0080 fcffffff 05010000 008d9000 00000089  ................
+ 0090 55f4ff75 0cff7508 ff75f48d 900c0000  U..u..u..u......
+ 00a0 005289c3 e8fcffff ff83c410 908b5dfc  .R............].
+ 00b0 c9c3                                 ..              
+Contents of section .rodata:
+ 0000 68656c6c 6f20776f 726c6400 25732061  hello world.%s a
+ 0010 3d256420 623d2564 0a00               =%d b=%d..      
+Contents of section .text.__x86.get_pc_thunk.ax:
+ 0000 8b0424c3                             ..$.            
+Contents of section .debug_info:
+ 0000 3e010000 05000104 00000000 06690000  >............i..
+ 0010 001d2500 00000000 00000000 0000b200  ..%.............
+ 0020 00000000 00000104 07210000 00010106  .........!......
+ 0030 64000000 072d0000 00010108 2e000000  d....-..........
+ 0040 0102070e 00000001 04070401 00000101  ................
+ 0050 06320100 00010205 28010000 08040569  .2......(......i
+ 0060 6e740001 08050000 00000108 074d0000  nt...........M..
+ 0070 00010405 fb000000 022d0000 00091b01  .........-......
+ 0080 00000264 010c5c00 00009500 00000a95  ...d..\.........
+ 0090 0000000b 00023400 00000c41 00000001  ......4....A....
+ 00a0 12067800 00003a00 0000019c d6000000  ..x...:.........
+ 00b0 05610016 5c000000 02910005 62001d5c  .a..\.......b..\
+ 00c0 00000002 91040d22 01000001 130b7800  ......."......x.
+ 00d0 00000291 6c000ef6 00000001 06055c00  ....l.........\.
+ 00e0 00000000 00007800 0000019c 3c010000  ......x.....<...
+ 00f0 03160100 000e5c00 00000291 00033e01  ......\.......>.
+ 0100 00001a3c 01000002 7564033c 00000028  ...<....ud.<...(
+ 0110 3c010000 02756004 61000709 5c000000  <....u`.a...\...
+ 0120 02756804 6200070c 5c000000 02756c04  .uh.b...\....ul.
+ 0130 63000809 5c000000 02757000 02780000  c...\....up..x..
+ 0140 0000                                 ..              
+Contents of section .debug_abbrev:
+ 0000 0124000b 0b3e0b03 0e000002 0f000b21  .$...>.........!
+ 0010 04491300 00030500 030e3a21 013b2106  .I........:!.;!.
+ 0020 390b4913 02180000 04340003 083a2101  9.I......4...:!.
+ 0030 3b0b390b 49130218 00000505 0003083a  ;.9.I..........:
+ 0040 21013b21 12390b49 13021800 00061101  !.;!.9.I........
+ 0050 250e130b 031f1b1f 11011206 10170000  %...............
+ 0060 07260049 13000008 24000b0b 3e0b0308  .&.I....$...>...
+ 0070 0000092e 013f1903 0e3a0b3b 05390b27  .....?...:.;.9.'
+ 0080 1949133c 19011300 000a0500 49130000  .I.<........I...
+ 0090 0b180000 000c2e01 3f19030e 3a0b3b0b  ........?...:.;.
+ 00a0 390b2719 11011206 40187c19 01130000  9.'.....@.|.....
+ 00b0 0d340003 0e3a0b3b 0b390b49 13021800  .4...:.;.9.I....
+ 00c0 000e2e01 3f19030e 3a0b3b0b 390b2719  ....?...:.;.9.'.
+ 00d0 49131101 12064018 7c190113 000000    I.....@.|...... 
+Contents of section .debug_aranges:
+ 0000 1c000000 02000000 00000400 00000000  ................
+ 0010 00000000 b2000000 00000000 00000000  ................
+Contents of section .debug_line:
+ 0000 6f000000 05000400 37000000 010101fb  o.......7.......
+ 0010 0e0d0001 01010100 00000100 00010101  ................
+ 0020 1f033300 00005800 00005e00 00000201  ..3...X...^.....
+ 0030 1f020f03 6b000000 01730000 00017b00  ....k....s....{.
+ 0040 00000205 30000502 00000000 17022912  ....0.........).
+ 0050 0507af75 75050568 050c0822 05015905  ...uu..h..."..Y.
+ 0060 20088405 0b081305 05920501 08910206   ...............
+ 0070 000101                               ...             
+Contents of section .debug_str:
+ 0000 6c6f6e67 206c6f6e 6720696e 74007368  long long int.sh
+ 0010 6f727420 756e7369 676e6564 20696e74  ort unsigned int
+ 0020 00756e73 69676e65 6420696e 7400756e  .unsigned int.un
+ 0030 7369676e 65642063 68617200 656e7670  signed char.envp
+ 0040 00707269 6e745f68 656c6c6f 006c6f6e  .print_hello.lon
+ 0050 67206c6f 6e672075 6e736967 6e656420  g long unsigned 
+ 0060 696e7400 63686172 00474e55 20433137  int.char.GNU C17
+ 0070 2031312e 342e3020 2d6d6173 6d3d696e   11.4.0 -masm=in
+ 0080 74656c20 2d6d3332 202d6d74 756e653d  tel -m32 -mtune=
+ 0090 67656e65 72696320 2d6d6172 63683d69  generic -march=i
+ 00a0 36383620 2d67202d 66617379 6e636872  686 -g -fasynchr
+ 00b0 6f6e6f75 732d756e 77696e64 2d746162  onous-unwind-tab
+ 00c0 6c657320 2d667374 61636b2d 70726f74  les -fstack-prot
+ 00d0 6563746f 722d7374 726f6e67 202d6673  ector-strong -fs
+ 00e0 7461636b 2d636c61 73682d70 726f7465  tack-clash-prote
+ 00f0 6374696f 6e006d61 696e006c 6f6e6720  ction.main.long 
+ 0100 696e7400 6c6f6e67 20756e73 69676e65  int.long unsigne
+ 0110 6420696e 74006172 67630070 72696e74  d int.argc.print
+ 0120 66006865 6c6c6f00 73686f72 7420696e  f.hello.short in
+ 0130 74007369 676e6564 20636861 72006172  t.signed char.ar
+ 0140 677600                               gv.             
+Contents of section .debug_line_str:
+ 0000 2f686f6d 652f6461 6c74726f 2f53756d  /home/daltro/Sum
+ 0010 6d617279 2f737973 74656d5f 736f6674  mary/system_soft
+ 0020 77617265 00737263 2f632f68 656c6c6f  ware.src/c/hello
+ 0030 2e63002f 686f6d65 2f64616c 74726f2f  .c./home/daltro/
+ 0040 53756d6d 6172792f 73797374 656d5f73  Summary/system_s
+ 0050 6f667477 61726500 7372632f 63002f75  oftware.src/c./u
+ 0060 73722f69 6e636c75 64650068 656c6c6f  sr/include.hello
+ 0070 2e630068 656c6c6f 2e630073 7464696f  .c.hello.c.stdio
+ 0080 2e6800                               .h.             
+Contents of section .comment:
+ 0000 00474343 3a202855 62756e74 75203131  .GCC: (Ubuntu 11
+ 0010 2e342e30 2d317562 756e7475 317e3232  .4.0-1ubuntu1~22
+ 0020 2e303429 2031312e 342e3000           .04) 11.4.0.    
+Contents of section .eh_frame:
+ 0000 14000000 00000000 017a5200 017c0801  .........zR..|..
+ 0010 1b0c0404 88010000 28000000 1c000000  ........(.......
+ 0020 00000000 78000000 00440c01 00491005  ....x....D...I..
+ 0030 02750041 0f03757c 0602650c 010041c5  .u.A..u|..e...A.
+ 0040 430c0404 20000000 48000000 78000000  C... ...H...x...
+ 0050 3a000000 00410e08 8502420d 05448303  :....A....B..D..
+ 0060 72c5c30c 04040000 10000000 6c000000  r...........l...
+ 0070 00000000 04000000 00000000           ............    
+
+src/c/hello.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+// Copyright 2025 Daltro Oliveira Vinuto daltroov777@gmail.com
+#include <stdio.h>
+
+void print_hello(int, int);
+
+int main(int argc, char *argv[], char *envp[]) {
+   0:	8d 4c 24 04          	lea    ecx,[esp+0x4]
+   4:	83 e4 f0             	and    esp,0xfffffff0
+   7:	ff 71 fc             	push   DWORD PTR [ecx-0x4]
+   a:	55                   	push   ebp
+   b:	89 e5                	mov    ebp,esp
+   d:	51                   	push   ecx
+   e:	83 ec 24             	sub    esp,0x24
+  11:	e8 fc ff ff ff       	call   12 <main+0x12>
+  16:	05 01 00 00 00       	add    eax,0x1
+  1b:	89 c8                	mov    eax,ecx
+  1d:	8b 50 04             	mov    edx,DWORD PTR [eax+0x4]
+  20:	89 55 e4             	mov    DWORD PTR [ebp-0x1c],edx
+  23:	8b 40 08             	mov    eax,DWORD PTR [eax+0x8]
+  26:	89 45 e0             	mov    DWORD PTR [ebp-0x20],eax
+  29:	65 a1 14 00 00 00    	mov    eax,gs:0x14
+  2f:	89 45 f4             	mov    DWORD PTR [ebp-0xc],eax
+  32:	31 c0                	xor    eax,eax
+    int a, b;
+    int c;
+    a = 5;
+  34:	c7 45 e8 05 00 00 00 	mov    DWORD PTR [ebp-0x18],0x5
+    b = 7;
+  3b:	c7 45 ec 07 00 00 00 	mov    DWORD PTR [ebp-0x14],0x7
+    c = &a;
+  42:	8d 45 e8             	lea    eax,[ebp-0x18]
+  45:	89 45 f0             	mov    DWORD PTR [ebp-0x10],eax
+
+    print_hello(a, b);
+  48:	8b 45 e8             	mov    eax,DWORD PTR [ebp-0x18]
+  4b:	83 ec 08             	sub    esp,0x8
+  4e:	ff 75 ec             	push   DWORD PTR [ebp-0x14]
+  51:	50                   	push   eax
+  52:	e8 fc ff ff ff       	call   53 <main+0x53>
+  57:	83 c4 10             	add    esp,0x10
+
+    return 0;
+  5a:	b8 00 00 00 00       	mov    eax,0x0
+}
+  5f:	8b 55 f4             	mov    edx,DWORD PTR [ebp-0xc]
+  62:	65 2b 15 14 00 00 00 	sub    edx,DWORD PTR gs:0x14
+  69:	74 05                	je     70 <main+0x70>
+  6b:	e8 fc ff ff ff       	call   6c <main+0x6c>
+  70:	8b 4d fc             	mov    ecx,DWORD PTR [ebp-0x4]
+  73:	c9                   	leave  
+  74:	8d 61 fc             	lea    esp,[ecx-0x4]
+  77:	c3                   	ret    
+
+00000078 <print_hello>:
+
+void print_hello(int a, int b) {
+  78:	55                   	push   ebp
+  79:	89 e5                	mov    ebp,esp
+  7b:	53                   	push   ebx
+  7c:	83 ec 14             	sub    esp,0x14
+  7f:	e8 fc ff ff ff       	call   80 <print_hello+0x8>
+  84:	05 01 00 00 00       	add    eax,0x1
+    char *hello = "hello world";
+  89:	8d 90 00 00 00 00    	lea    edx,[eax+0x0]
+  8f:	89 55 f4             	mov    DWORD PTR [ebp-0xc],edx
+
+    printf("%s a=%d b=%d\n", hello, a, b);
+  92:	ff 75 0c             	push   DWORD PTR [ebp+0xc]
+  95:	ff 75 08             	push   DWORD PTR [ebp+0x8]
+  98:	ff 75 f4             	push   DWORD PTR [ebp-0xc]
+  9b:	8d 90 0c 00 00 00    	lea    edx,[eax+0xc]
+  a1:	52                   	push   edx
+  a2:	89 c3                	mov    ebx,eax
+  a4:	e8 fc ff ff ff       	call   a5 <print_hello+0x2d>
+  a9:	83 c4 10             	add    esp,0x10
+}
+  ac:	90                   	nop
+  ad:	8b 5d fc             	mov    ebx,DWORD PTR [ebp-0x4]
+  b0:	c9                   	leave  
+  b1:	c3                   	ret    
+
+Disassembly of section .text.__x86.get_pc_thunk.ax:
+
+00000000 <__x86.get_pc_thunk.ax>:
+   0:	8b 04 24             	mov    eax,DWORD PTR [esp]
+   3:	c3                   	ret    

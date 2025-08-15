@@ -2,20 +2,22 @@ dev : compile static_check dynamic_check
 prod : compile  
 
 compile: preprocess_only compile_only assemble_only link 
+asm: assemble_with_nasm link_with_ld load_asm
 
 
 # compilation with GCC --------------------------------------------------
 # -g for debug and empty for not debug
-DEBUG_FLAG := -g
+# -g is necessary for debug with gdb but make the object file bigger(adding debug symbols)
+DEBUG_FLAG :=-g
 
 SOURCE_FILE := hello
-SOURCE_EXTENSION := .asm
-SOURCE_FOLDER := src/x86/
+SOURCE_EXTENSION := .c
+SOURCE_FOLDER := src/c/
 SOURCE_PATH := $(SOURCE_FOLDER)$(SOURCE_FILE)$(SOURCE_EXTENSION)
 
 TARGET_FILE := $(SOURCE_FILE)
 TARGET_EXTENSION := .out
-TARGET_FOLDER := src/x86/
+TARGET_FOLDER := src/c/
 TARGET_PATH := $(TARGET_FOLDER)$(TARGET_FILE)$(TARGET_EXTENSION)
 
 GCC := gcc
@@ -78,8 +80,6 @@ FLAGS_LD_x64 :=$(DEBUG_FLAG)""
 NASM := nasm
 LD := ld
 
-asm: assemble_with_nasm link_with_ld load_asm
-
 assemble_with_nasm:
 	$(NASM) $(SOURCE_PATH) $(FLAGS_NASM_x86) -o $(SOURCE_FOLDER)$(SOURCE_FILE).o 
 
@@ -124,6 +124,28 @@ debug_c:
 
 debug_asm:
 	$(GDB) $(TARGET_PATH) $(GDB_ASM_FLAGS)
+
+# b function_name/line of code: add a breaking point in the debugging code
+# n: (next) execute the next instruction, a C instruction(C file) or a assembly instruction(asm file)
+# s: (step) step inside the function instruction while n(next) just execute the whole function at once
+# ni: (nexti) execute the next assembly instruction
+# c: (continue) continue the execution until the next breaking point or the end
+# info r: (info registers) display value of the main registers 
+# info all-registers: display the value of all the registers, including FP registers
+# info args: display function arguments
+# info f: (info frame) display the information about the current stack frame
+# p /x $eax: display the value of the register eax
+# x /c $eax: examine memory of the address in eax, show in char(c) format
+# x /-10xw $ebp: examine 10 words(32 bits,4 bytes) backwards(lower memory) in the x(hexadecimal) format
+# x /10xb $esp: examine 10 bytes in the x(hexadecimal) format in the higher memory address.
+# size letters: b(byte), h(halfword), w(word(standard)), g(giant, 8 bytes); this mode is saved
+# obs.: when size is b(byte) the direction is left->right, when is w(word) is right->left in memory
+# formats: /o /x /u /t(binary) /d /f /a(address) /c /s /i(instruction only for examine)
+# refresh: refresh the terminal display
+# call function_a(args): execute the function_a(args);
+# quit: stops gdb
+# info files; info signals; info threads; info function REGEX_OF_FUNCTION
+# info os processes; info os threads; info os semaphores; info os files; info os sockets;
 
 
 # end of the debugging section with gdb --------------------------------------
