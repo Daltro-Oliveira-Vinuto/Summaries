@@ -19,7 +19,11 @@
 	> * assembler: gcc -c, assembly language -> machine language.
 	> * link: gcc -l -o, object file(machine language) -> load module(executable file).
 	> * loader: ./file , (load module(executable file) in the main memory.
-  	> * [makefile](makefile)
+  	> * [makefile](makefile).
+  	> * Phases: analysis & synthesis. Use tables(ex.: Symbol Table).
+	> * Analysis: lexical analyser(scanner(Regular Expression matching(ex.: Flex) to match tokens using a FSA(finite state automaton for regular language))) -> syntax analyser(parser(BNF/EBNF grammar)for PDA(pushdown automaton for context-free language) ex.: Bison) generates a parse tree, the parser calls the scanner for a token -> semantic analyser(verify variable type, declaration duplicated, flow control, implicit casting) generates a annotated parse tree.
+	> * Synthesis: Intermediate Code generation(three addrees code=(operation, operand 1, operand 2)) -> Code Optimization ->  Code Generation(generates the object code to a specific ISA(Instruction Set Architecture) directly or generates the assembly code and then calls the assembler for a ISA).
+	> * Three Addrees Code: attribute(simple copy, unary, binary operations), jumps(unconditional, conditional), functions(parameters, call, return), access indexed/indirect(with arrays/pointers).
 
 2. ## Assembler
 
