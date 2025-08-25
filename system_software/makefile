@@ -7,7 +7,7 @@ asm: assemble_with_nasm link_with_ld load_asm
 
 # compilation with GCC --------------------------------------------------
 # -g for debug and empty for not debug
-# -g is necessary for debug with gdb but make the object file bigger(adding debug symbols)
+# -g is necessary for debug with gdb but make the object file bigger by adding debug symbols
 DEBUG_FLAG :=-g
 
 SOURCE_FILE := hello
@@ -23,9 +23,8 @@ TARGET_PATH := $(TARGET_FOLDER)$(TARGET_FILE)$(TARGET_EXTENSION)
 GCC := gcc
 FLAGS_x86 :=$(DEBUG_FLAG) -masm=intel -m32 -Wall
 FLAGS_x64 :=$(DEBUG_FLAG) -masm=intel -m64 -Wall
-FILES_AND_FLAGS_TO_LINK_x86 :=$(DEBUG_FLAG) -m32 -Wall $(SOURCE_FOLDER)*.o -L -I
-FILES_AND_FLAGS_TO_LINK_x64 :=$(DEBUG_FLAG) -m64 -Wall $(SOURCE_FOLDER)*.o -L -I
-
+FILES_AND_FLAGS_TO_LINK_x86 :=$(DEBUG_FLAG) -masm=intel -m32 -Wall $(SOURCE_FOLDER)*.o -L -I
+FILES_AND_FLAGS_TO_LINK_x64 :=$(DEBUG_FLAG) -masm=intel -m64 -Wall $(SOURCE_FOLDER)*.o -L -I
 
 INPUT_FILE_TO_MAIN := input.txt 
 OUTPUT_FILE_TO_MAIN := output.txt 
